@@ -20,9 +20,12 @@ const Cart = (props) => {
                         <label htmlFor="#">{registered}</label>
                     </div>
                 </div>
-                <button className='cart-button'>{time} min read
+                <div className='btn-container'>
+                <label htmlFor="">{time} min read</label>
+                <button className='cart-button'>
                 <FontAwesomeIcon className='font-aws-icon' icon={faBookmark} />
                 </button>
+                </div>
             </div>
             <h2>{about}</h2>
             <label htmlFor="#">#beginners</label>
