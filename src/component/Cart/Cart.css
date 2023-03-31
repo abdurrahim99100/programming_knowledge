@@ -3,6 +3,13 @@
     height: 500px;
     border-radius: 8px;
 }
+.cart-container label{
+    color: darkgray;
+}
+.cart-container a{
+    display: block;
+    margin: 20px 0 5px 0;
+}
 .cart-container{
     margin: 50px 0 0 0;
 }
@@ -10,6 +17,7 @@
     display: flex;
     width: 1000px;
     justify-content: space-between;
+    align-items: center;
 }
 .cart-dtl-container button{
     display: block;
@@ -35,4 +43,23 @@
 
 .cart-button{
     border: 0;
+    height: 45px;
+    font-size: 22px;
+    border-radius: 5px;
+}
+
+.last-atag{
+    width: 100px;
+}
+
+.hr-line{
+    width: 1000px;
+    margin: 15px 0 10px 0;
+}
+
+
+
+
+.font-aws-icon{
+    margin-left: 10px;
 }

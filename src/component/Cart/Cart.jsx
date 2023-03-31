@@ -1,9 +1,11 @@
 import React from 'react';
 import './Cart.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Cart = (props) => {
     // console.log(props.cart)
-    const { banner, id, profilePicture, name, registered, time } = props.cart;
+    const { banner, id, profilePicture, name, registered, time, about } = props.cart;
     console.log(profilePicture);
 
 
@@ -18,8 +20,15 @@ const Cart = (props) => {
                         <label htmlFor="#">{registered}</label>
                     </div>
                 </div>
-                <button className='cart-button'>{time} min read</button>
+                <button className='cart-button'>{time} min read
+                <FontAwesomeIcon className='font-aws-icon' icon={faBookmark} />
+                </button>
             </div>
+            <h2>{about}</h2>
+            <label htmlFor="#">#beginners</label>
+            <label htmlFor="#"> #programming</label>
+            <a className='last-atag' href="#">Mark as read</a>
+            <hr className='hr-line' />
         </div>
     );
 };
