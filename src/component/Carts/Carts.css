@@ -4,3 +4,17 @@
     margin: 50px 120px 0 120px;
 
 }
+
+
+.side-carts{
+    background-color: rgba(17, 17, 17, 0.05);
+    padding: 10px;
+}
+.side-carts p{
+    background-color: white;
+    text-align: center;
+    font-size: 23px;
+}
+.side-cart-detail{
+    padding: 0 5px 0 5px;
+}

@@ -6,7 +6,9 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 const Cart = (props) => {
     // console.log(props.cart)
     const { banner, id, profilePicture, name, registered, time, about } = props.cart;
-    console.log(profilePicture);
+    // console.log(profilePicture);
+    // console.log(props.addToBookmark)
+    const addToBookmark = props.addToBookmark;
 
 
     return (
@@ -22,7 +24,7 @@ const Cart = (props) => {
                 </div>
                 <div className='btn-container'>
                 <label htmlFor="">{time} min read</label>
-                <button className='cart-button'>
+                <button onClick={()=>addToBookmark(props.cart)} className='cart-button'>
                 <FontAwesomeIcon className='font-aws-icon' icon={faBookmark} />
                 </button>
                 </div>
