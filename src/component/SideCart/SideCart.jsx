@@ -4,14 +4,8 @@ import './SideCart.css'
 
 
 const SideCart = (props) => {
-    // console.log(props);
-    // const [carts, setCarts] = useState([]);
 
 const newCart = props.cart;
-
-
-
-
 
 
     return (

@@ -6,6 +6,7 @@ import './Carts.css'
 const Carts = () => {
     const [carts, setCarts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [time, setTime] = useState([0]);
 
 
     useEffect(() => {
@@ -20,7 +21,16 @@ const Carts = () => {
         // console.log("first", cart);
         const newCart = [...cart, product];
         setCart(newCart);
+    };
+        
+    const minAddToCart = (product) => {
+        // console.log('hello',product);
+        const totalTime = parseInt(time + product);
+        setTime(totalTime);
+        
     }
+
+    
     return (
         <div className='carts-container'>
             <div className="carts">
@@ -28,12 +38,16 @@ const Carts = () => {
                     carts.map(cart => <Cart
                         key={cart.id}
                         cart={cart}
+                        carts={carts}
                         addToBookmark={addToBookmark}
+                        minAddToCart={minAddToCart}
                     ></Cart>)
                 }
             </div>
             <div className="side-carts">
-                <p>Spent time on read : 0 min</p>
+                <div>
+                <p>Spent time on read :{time} min</p>
+                </div>
                 <div className='side-cart-detail'>
                 <SideCart
                 cart={cart}

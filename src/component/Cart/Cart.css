@@ -43,7 +43,11 @@
 
 
 .last-atag{
-    width: 100px;
+    display: block;
+    border: 0;
+    border-bottom: 1px solid rgb(48, 48, 255);
+    margin-top: 10px;
+    color: rgb(48, 48, 255);
 }
 
 .hr-line{

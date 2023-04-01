@@ -4,12 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Cart = (props) => {
-    // console.log(props.cart)
-    const { banner, id, profilePicture, name, registered, time, about } = props.cart;
+    // console.log(props)
+    const { banner, id, profilePicture, name, registered, time, about, } = props.cart;
     // console.log(profilePicture);
-    // console.log(props.addToBookmark)
     const addToBookmark = props.addToBookmark;
 
+    const minAddToCart = props.minAddToCart;
+    
 
     return (
         <div className='cart-container'>
@@ -32,7 +33,7 @@ const Cart = (props) => {
             <h2>{about}</h2>
             <label htmlFor="#">#beginners</label>
             <label htmlFor="#"> #programming</label>
-            <a className='last-atag' href="#">Mark as read</a>
+            <button onClick={() => minAddToCart(time)} className='last-atag' href="#">Mark as read</button>
             <hr className='hr-line' />
         </div>
     );
